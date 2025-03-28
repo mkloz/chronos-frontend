@@ -66,8 +66,10 @@ export const App = () => {
   useTheme();
 
   useEffect(() => {
-    if (myCalendars.isSuccess && isCountryCodeReady && countryCode && data) {
-      const hasHolidaysCalendar = myCalendars.data.some((calendar) => calendar.name === `${countryCode} Holidays`);
+    if (myCalendars.isSuccess && myCalendars.data.length && isCountryCodeReady && countryCode && data) {
+      const hasHolidaysCalendar = myCalendars.data.some((calendar) =>
+        calendar.name.includes(`${countryCode} Holidays`)
+      );
       if (!hasHolidaysCalendar) {
         toast.info('You do not have a calendar with holidays. Creating one for you.');
         mutate();
