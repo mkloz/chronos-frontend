@@ -1,6 +1,6 @@
 import { cn } from '../../../../shared/lib/utils';
 
-const DAY_OF_WEEK = ['Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun'];
+const DAY_OF_WEEK = ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'];
 
 export const MonthCalendarHeader = () => {
   return (
